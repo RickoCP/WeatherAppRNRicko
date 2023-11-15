@@ -10,10 +10,10 @@ class SelectedCondition implements ISelectedConditionEntity {
   private readonly _selected_uv: number;
 
   constructor(params: ISelectedConditionData) {
-    this._selected_temp_c = params.temp_c;
-    this._selected_wind_dir = params.wind_dir;
-    this._selected_humidity = params.humidity;
-    this._selected_uv = params.uv;
+    this._selected_temp_c = params.forecastday_temp_c;
+    this._selected_wind_dir = params.forecastday_wind_dir;
+    this._selected_humidity = params.forecastday_humidity;
+    this._selected_uv = params.forecastday_uv;
   }
 
   get selected_temp_c() {

@@ -2,8 +2,8 @@ import {IDetailWeatherEntity} from '@domains/aggregates/interfaces/iDetailWeathe
 import {ISelectedTerritoryEntity} from '@domains/entities/interfaces/iSelectedTerritory';
 
 export interface IDetailWeatherUseCase {
-  getDetailWeather(territory: string): Promise<IDetailWeatherEntity>;
+  getDetailWeather(): Promise<IDetailWeatherEntity>;
   getSearchWeather(territory: string): Promise<ISelectedTerritoryEntity[]>;
   getSelectedTerritory(): Promise<ISelectedTerritoryEntity>;
-  setSelectedTerritory(territory: string): void;
+  setSelectedTerritory(territory: ISelectedTerritoryEntity): void;
 }

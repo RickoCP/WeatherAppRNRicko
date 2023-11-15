@@ -10,26 +10,28 @@ import {ISelectedTerritoryEntity} from '@domains/entities/interfaces/iSelectedTe
 class DetailWeatherUseCase implements IDetailWeatherUseCase {
   constructor(private readonly detailWeatherRepo: IDetailWeatherRepository) {}
 
-  async getDetailWeather(territory: string): Promise<IDetailWeatherEntity> {
+  async getDetailWeather(): Promise<IDetailWeatherEntity> {
     const selectedTerritory =
       await this.detailWeatherRepo.getSelectedTerritory();
     const forecastWeather = await this.detailWeatherRepo.getForecastWeather(
-      territory,
+      selectedTerritory.url,
     );
-
-    const filteredSelectedCondition = forecastWeather.hour.filter(
-      data => (data.time = forecastWeather.current.last_updated),
-    )[0];
 
     const selectedTerritoryData = new SelectedTerritory(selectedTerritory);
     const ferecastWeaterData = new ForecastWeather(forecastWeather);
+    const detailWeatherData = new DetailWeather();
+
+    detailWeatherData.pushSelectedTerritory(selectedTerritoryData);
+    detailWeatherData.pushForecastWeather(ferecastWeaterData);
+
+    const filteredSelectedCondition =
+      detailWeatherData.forecastWeather.forecastday_hour.filter(
+        data => (data.forecastday_time = forecastWeather.current.last_updated),
+      )[0];
+
     const selectedConditionData = new SelectedCondition(
       filteredSelectedCondition,
     );
-
-    const detailWeatherData = new DetailWeather();
-    detailWeatherData.pushSelectedTerritory(selectedTerritoryData);
-    detailWeatherData.pushForecastWeather(ferecastWeaterData);
     detailWeatherData.pushSelectedConditionItem(selectedConditionData);
 
     return detailWeatherData;
@@ -56,7 +58,7 @@ class DetailWeatherUseCase implements IDetailWeatherUseCase {
     return selectedTerritoryData;
   }
 
-  setSelectedTerritory(territory: string): void {
+  setSelectedTerritory(territory: ISelectedTerritoryEntity): void {
     this.detailWeatherRepo.setSelectedTerritory(territory);
   }
 }

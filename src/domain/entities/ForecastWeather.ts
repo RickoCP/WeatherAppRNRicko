@@ -30,6 +30,9 @@ class ForecastWeather implements IForecastWeatherEntity {
       forecastday_time: x.time,
       forecastday_icon: x.condition.icon,
       forecastday_temp_c: x.temp_c,
+      forecastday_wind_dir: x.wind_dir,
+      forecastday_humidity: x.humidity,
+      forecastday_uv: x.uv,
     }));
   }
 

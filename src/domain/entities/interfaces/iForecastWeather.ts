@@ -92,6 +92,9 @@ export interface IForecastdayHour {
   forecastday_time: string;
   forecastday_icon: string;
   forecastday_temp_c: number;
+  forecastday_wind_dir: string;
+  forecastday_humidity: number;
+  forecastday_uv: number;
 }
 
 export interface IForecastWeatherEntity {
