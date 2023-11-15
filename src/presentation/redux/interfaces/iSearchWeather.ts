@@ -12,6 +12,7 @@ export interface ISearchWeatherStateGroup {
   SearchWeather: ISearchWeather;
 }
 
-export interface IReducer {
-  (state: ISearchWeather, action: ISearchWeatherAction): ISearchWeather;
-}
+export type IReducer = (
+  state: ISearchWeather,
+  action: ISearchWeatherAction,
+) => ISearchWeather;

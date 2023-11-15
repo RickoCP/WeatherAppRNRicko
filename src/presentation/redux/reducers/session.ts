@@ -9,15 +9,14 @@ const initState: IToken = {
 };
 
 const session: IReducer = (state = initState, action: ILoginAction): IToken => {
-  switch (action.type) {
-    case LOGIN:
-      return {
-        token: action.payload.token,
-      };
-    default:
-      return {
-        ...state,
-      };
+  if (action.type === LOGIN) {
+    return {
+      token: action.payload.token,
+    };
+  } else {
+    return {
+      ...state,
+    };
   }
 };
 

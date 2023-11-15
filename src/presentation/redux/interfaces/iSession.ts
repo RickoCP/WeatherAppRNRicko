@@ -9,6 +9,4 @@ export interface ISessionStateGroup {
   session: IToken;
 }
 
-export interface IReducer {
-  (state: IToken, action: ILoginAction): IToken;
-}
+export type IReducer = (state: IToken, action: ILoginAction) => IToken;

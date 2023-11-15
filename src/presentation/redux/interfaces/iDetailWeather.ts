@@ -13,6 +13,7 @@ export interface IDetailWeatherStateGroup {
   detailWeather: IDetailWeather;
 }
 
-export interface IReducer {
-  (state: IDetailWeather, action: IDetailWeatherAction): IDetailWeather;
-}
+export type IReducer = (
+  state: IDetailWeather,
+  action: IDetailWeatherAction,
+) => IDetailWeather;
