@@ -1,7 +1,5 @@
-// import {Day, Night} from '@core/initialData/initialData';
-import {Day, Night} from '../../src/core/initialData/initialData';
-// import {getDayOrNight} from '@core/lib/getDayOrNight';
-import {getDayOrNight} from '../../src/core/lib/getDayOrNight';
+import {Day, Night} from '@core/initialData/initialData';
+import {getDayOrNight} from '@core/lib/getDayOrNight';
 import 'react-native';
 
 test('function getDayOrNight test', () => {
