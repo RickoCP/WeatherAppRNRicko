@@ -97,6 +97,11 @@ export interface IForecastdayHour {
   forecastday_uv: number;
 }
 
+export interface IForecastdayHourData {
+  date: string;
+  hourData: IForecastdayHour[];
+}
+
 export interface IForecastWeatherEntity {
   localtime: string;
   name: string;
@@ -107,12 +112,17 @@ export interface IForecastWeatherEntity {
   sunset: string;
   moonrise: string;
   moonset: string;
-  forecastday_hour: IForecastdayHour[];
+  forecastday_hour: IForecastdayHourData[];
+}
+
+interface IHourData {
+  date: string;
+  hourData: IHour[];
 }
 
 export interface IForecastWeatherData {
   location: ILocation;
   current: ICurrent;
   astro: IAstro;
-  hour: IHour[];
+  hour: IHourData[];
 }

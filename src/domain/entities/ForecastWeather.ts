@@ -1,7 +1,7 @@
 import {
   IForecastWeatherEntity,
   IForecastWeatherData,
-  IForecastdayHour,
+  IForecastdayHourData,
 } from '@domains/entities/interfaces/iForecastWeather';
 
 class ForecastWeather implements IForecastWeatherEntity {
@@ -14,7 +14,7 @@ class ForecastWeather implements IForecastWeatherEntity {
   private readonly _sunset: string;
   private readonly _moonrise: string;
   private readonly _moonset: string;
-  private readonly _forecastday_hour: IForecastdayHour[];
+  private readonly _forecastday_hour: IForecastdayHourData[];
 
   constructor(params: IForecastWeatherData) {
     this._localtime = params.location.localtime;
@@ -27,12 +27,15 @@ class ForecastWeather implements IForecastWeatherEntity {
     this._moonrise = params.astro.moonrise;
     this._moonset = params.astro.moonset;
     this._forecastday_hour = params.hour.map(x => ({
-      forecastday_time: x.time,
-      forecastday_icon: x.condition.icon,
-      forecastday_temp_c: x.temp_c,
-      forecastday_wind_dir: x.wind_dir,
-      forecastday_humidity: x.humidity,
-      forecastday_uv: x.uv,
+      date: x.date,
+      hourData: x.hourData.map(y => ({
+        forecastday_time: y.time,
+        forecastday_icon: y.condition.icon,
+        forecastday_temp_c: y.temp_c,
+        forecastday_wind_dir: y.wind_dir,
+        forecastday_humidity: y.humidity,
+        forecastday_uv: y.uv,
+      })),
     }));
   }
 

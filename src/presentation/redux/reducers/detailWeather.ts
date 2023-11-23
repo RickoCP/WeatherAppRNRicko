@@ -7,7 +7,6 @@ import {
   GET_DETAILWEATHERLOADING,
   GET_DETAILWEATHERRESET,
   GET_DETAILWEATHERSUCCESS,
-  SET_SELECTEDCONDITION,
   IReducer,
 } from '../interfaces/iDetailWeather';
 
@@ -22,6 +21,7 @@ const detailWeather: IReducer = (
   state = initState,
   action: IDetailWeatherAction,
 ) => {
+  console.log('run detailWeather reducer:  ', action.type);
   switch (action.type) {
     case GET_DETAILWEATHERLOADING:
       return {
@@ -44,17 +44,6 @@ const detailWeather: IReducer = (
     case GET_DETAILWEATHERRESET:
       return {
         ...initState,
-      };
-    case SET_SELECTEDCONDITION:
-      return {
-        ...state,
-        selectedCondition: action.payload.selectedCondition,
-        detailWeather: [
-          {
-            ...state.detailWeather[0],
-            selectedCondition: action.payload.selectedCondition[0],
-          },
-        ],
       };
     default:
       return {

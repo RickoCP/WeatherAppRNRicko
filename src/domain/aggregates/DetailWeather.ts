@@ -30,6 +30,7 @@ class DetailWeather implements IDetailWeatherEntity {
       forecastday_hour: [],
     };
     this._selectedCondition = {
+      selected_time: '',
       selected_temp_c: 0,
       selected_wind_dir: '',
       selected_humidity: 0,

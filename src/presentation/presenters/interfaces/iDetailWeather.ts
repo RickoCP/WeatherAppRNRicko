@@ -3,12 +3,15 @@ import {ISelectedConditionEntity} from '@domains/entities/interfaces/iSelectedCo
 import {
   IDetailWeatherAction,
   ISearchWeatherAction,
+  ISelectedConditionAction,
 } from '../action-interfaces/iDetailWeather';
 
 export interface IDetailWeatherPresenter {
   getDetailWeather(): Promise<IDetailWeatherAction>;
   getDetailWeatherLoading(): Promise<IDetailWeatherAction>;
-  setSelectedCondition(territory: ISelectedConditionEntity): void;
+  setSelectedCondition(
+    territory: ISelectedConditionEntity,
+  ): ISelectedConditionAction;
 
   getSearchWeather(territory: string): Promise<ISearchWeatherAction>;
   getSearchWeatherLoading(): Promise<ISearchWeatherAction>;

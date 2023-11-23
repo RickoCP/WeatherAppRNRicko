@@ -1,6 +1,10 @@
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
+  presets: [
+    ['module:metro-react-native-babel-preset'],
+    '@babel/preset-typescript',
+  ],
   plugins: [
+    'nativewind/babel',
     [
       'module-resolver',
       {
@@ -20,8 +24,19 @@ module.exports = {
           '@data': './src/data',
           '@domains': './src/domain',
           '@presentation': './src/presentation',
-          '@lib': './src/core',
+          '@core': './src/core',
         },
+      },
+    ],
+    [
+      'module:react-native-dotenv',
+      {
+        envName: 'APP_ENV',
+        moduleName: '@env',
+        path: '.env',
+        safe: false,
+        allowUndefined: false,
+        verbose: false,
       },
     ],
   ],

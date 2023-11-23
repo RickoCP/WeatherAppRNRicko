@@ -14,9 +14,13 @@ export interface IDetailWeatherAction {
   payload: IDetailWeather;
 }
 
+export interface ISelectedWeather {
+  selectedCondition: ISelectedConditionEntity[];
+}
+
 export interface ISelectedConditionAction {
   type: string;
-  payload: ISelectedConditionEntity;
+  payload: ISelectedWeather;
 }
 
 export interface ISearchWeatherAction {
@@ -39,7 +43,7 @@ export interface IDetailWeatherActions {
 
   setSelectedCondition(
     condition: ISelectedConditionEntity,
-  ): IDetailWeatherAction;
+  ): ISelectedConditionAction;
 
   getSearchWeather(
     SearchWeatherEntity: ISelectedTerritoryEntity[],

@@ -3,6 +3,7 @@ import {
   IDetailWeatherActions,
   IDetailWeatherAction,
   ISearchWeatherAction,
+  ISelectedConditionAction,
 } from './action-interfaces/iDetailWeather';
 import {IDetailWeatherPresenter} from './interfaces/iDetailWeather';
 import {IDetailWeatherEntity} from '@domains/aggregates/interfaces/iDetailWeather';
@@ -20,6 +21,7 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
     try {
       const DetailWeatherEntity: IDetailWeatherEntity =
         await this.useCases.getDetailWeather();
+      await this.setSelectedCondition(DetailWeatherEntity.selectedCondition);
       return this.actions.getDetailWeather(DetailWeatherEntity);
     } catch (err: any) {
       console.log('error getDetailWeather presenter:', err);
@@ -32,9 +34,18 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
     return this.actions.getDetailWeatherLoading();
   }
 
-  setSelectedCondition(territory: ISelectedConditionEntity): void {
+  setSelectedCondition(
+    territory: ISelectedConditionEntity,
+  ): ISelectedConditionAction {
     console.log('run setSelectedCondition presenter ');
-    this.actions.setSelectedCondition(territory);
+    // return this.actions.setSelectedCondition(territory);
+    return this.actions.setSelectedCondition({
+      selected_time: territory.selected_time,
+      selected_temp_c: territory.selected_temp_c,
+      selected_wind_dir: territory.selected_wind_dir,
+      selected_humidity: territory.selected_humidity,
+      selected_uv: territory.selected_uv,
+    });
   }
 
   async getSearchWeather(territory: string): Promise<ISearchWeatherAction> {

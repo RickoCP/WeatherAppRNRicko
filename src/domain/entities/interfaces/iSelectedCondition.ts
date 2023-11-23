@@ -1,4 +1,5 @@
 export interface ISelectedConditionEntity {
+  selected_time: string;
   selected_temp_c: number;
   selected_wind_dir: string;
   selected_humidity: number;

@@ -96,6 +96,11 @@ interface IForecastday {
   hour: IHour[];
 }
 
+interface IHourData {
+  date: string;
+  hourData: IHour[];
+}
+
 interface IForecast {
   forecastday: IForecastday[];
 }
@@ -110,20 +115,23 @@ export interface IForecastWeatherDTO {
   readonly location: ILocation;
   readonly current: ICurrent;
   readonly astro: IAstro;
-  readonly hour: IHour[];
+  readonly hour: IHourData[];
 }
 
 class ForecastWeatherDTO implements IForecastWeatherDTO {
   readonly location: ILocation;
   readonly current: ICurrent;
   readonly astro: IAstro;
-  readonly hour: IHour[];
+  readonly hour: IHourData[];
 
   constructor(param: IForecastWeatherParams) {
     this.location = param.location;
     this.current = param.current;
     this.astro = param.forecast.forecastday[0].astro;
-    this.hour = param.forecast.forecastday[0].hour;
+    this.hour = param.forecast.forecastday.map(x => ({
+      date: x.date,
+      hourData: x.hour,
+    }));
   }
 }
 

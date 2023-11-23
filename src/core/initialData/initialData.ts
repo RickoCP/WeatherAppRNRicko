@@ -4,3 +4,6 @@ export const initialSelected = {
   country: 'Indonesia',
   url: 'jakarta-jakarta-raya-indonesia',
 };
+
+export const Day = 'day';
+export const Night = 'night';

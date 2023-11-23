@@ -20,6 +20,7 @@ const searchWeather: IReducer = (
   state = initState,
   action: ISearchWeatherAction,
 ) => {
+  console.log('run searchWeather reducer:  ', action.type);
   switch (action.type) {
     case GET_SEARCHWEATHERLOADING:
       return {

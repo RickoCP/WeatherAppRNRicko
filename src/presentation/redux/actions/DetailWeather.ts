@@ -5,6 +5,7 @@ import {
   IDetailWeatherActions,
   IDetailWeatherAction,
   ISearchWeatherAction,
+  ISelectedConditionAction,
 } from '@presentation/presenters/action-interfaces/iDetailWeather';
 import {
   GET_DETAILWEATHERERROR,
@@ -16,11 +17,14 @@ import {
   GET_SEARCHWEATHERLOADING,
   GET_SEARCHWEATHERSUCCESS,
 } from '../interfaces/iSearchWeather';
+import {SET_SELECTEDWEATHER} from '../interfaces/iSelectedWaether';
 
 class DetailWeatherActions implements IDetailWeatherActions {
   getDetailWeather(
     DetailWeatherEntity: IDetailWeatherEntity,
   ): IDetailWeatherAction {
+    console.log('run getDetailWeather action');
+    // console.log('DetailWeatherEntity.selectedCondition: ', DetailWeatherEntity);
     return {
       type: GET_DETAILWEATHERSUCCESS,
       payload: {
@@ -33,6 +37,7 @@ class DetailWeatherActions implements IDetailWeatherActions {
   }
 
   getDetailWeatherLoading(): IDetailWeatherAction {
+    console.log('run getDetailWeatherLoading action');
     return {
       type: GET_DETAILWEATHERLOADING,
       payload: {
@@ -45,6 +50,7 @@ class DetailWeatherActions implements IDetailWeatherActions {
   }
 
   getDetailWeatherError(err: any): IDetailWeatherAction {
+    console.log('run getDetailWeatherError action');
     return {
       type: GET_DETAILWEATHERERROR,
       payload: {
@@ -58,14 +64,13 @@ class DetailWeatherActions implements IDetailWeatherActions {
 
   setSelectedCondition(
     condition: ISelectedConditionEntity,
-  ): IDetailWeatherAction {
+  ): ISelectedConditionAction {
+    console.log('run setSelectedCondition action');
+    // console.log('run setSelectedCondition action: condition', condition);
     return {
-      type: GET_DETAILWEATHERERROR,
+      type: SET_SELECTEDWEATHER,
       payload: {
-        detailWeather: [],
         selectedCondition: [condition],
-        isLoading: false,
-        error: '',
       },
     };
   }
@@ -73,6 +78,7 @@ class DetailWeatherActions implements IDetailWeatherActions {
   getSearchWeather(
     SearchWeatherEntity: ISelectedTerritoryEntity[],
   ): ISearchWeatherAction {
+    console.log('run getSearchWeather action');
     return {
       type: GET_SEARCHWEATHERSUCCESS,
       payload: {
@@ -84,6 +90,7 @@ class DetailWeatherActions implements IDetailWeatherActions {
   }
 
   getSearchWeatherError(err: any): ISearchWeatherAction {
+    console.log('run getSearchWeatherError action');
     return {
       type: GET_SEARCHWEATHERERROR,
       payload: {
@@ -95,6 +102,7 @@ class DetailWeatherActions implements IDetailWeatherActions {
   }
 
   getSearchWeatherLoading(): ISearchWeatherAction {
+    console.log('run getSearchWeatherLoading action');
     return {
       type: GET_SEARCHWEATHERLOADING,
       payload: {

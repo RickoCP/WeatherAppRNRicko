@@ -9,7 +9,7 @@ export const GET_SEARCHWEATHERERROR = 'GET_SEARCHWEATHERERROR';
 export const GET_SEARCHWEATHERRESET = 'GET_SEARCHWEATHERRESET';
 
 export interface ISearchWeatherStateGroup {
-  SearchWeather: ISearchWeather;
+  searchWeather: ISearchWeather;
 }
 
 export type IReducer = (
