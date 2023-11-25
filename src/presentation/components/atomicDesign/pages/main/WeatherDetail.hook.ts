@@ -19,16 +19,23 @@ import {getDayOrNight} from '@core/lib/getDayOrNight';
 
 export function useWeatherDetail() {
   const dispatch = useDispatch();
-  const [showSearch, toggleSearch] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const [theme, setTheme] = useState('night');
+  const [refreshing, setRefreshing] = useState(false);
 
-  var detailWeather: IDetailWeather = useSelector(
+  const onRefresh = async () => {
+    setRefreshing(true);
+    await asyncDetailWeather();
+    setRefreshing(false);
+  };
+
+  let detailWeather: IDetailWeather = useSelector(
     (state: IDetailWeatherStateGroup) => state.detailWeather,
   );
-  var searchWeather: ISearchWeather = useSelector(
+  let searchWeather: ISearchWeather = useSelector(
     (state: ISearchWeatherStateGroup) => state.searchWeather,
   );
-  var selectedWeather: ISelectedWeather = useSelector(
+  let selectedWeather: ISelectedWeather = useSelector(
     (state: ISelectedWeatherStateGroup) => state.selectedWeather,
   );
 
@@ -50,12 +57,12 @@ export function useWeatherDetail() {
     dispatch(await di.detailWeather.getDetailWeather());
   };
 
-  var detailWeatherVM = new DetailWeatherVM(
+  let detailWeatherVM = new DetailWeatherVM(
     detailWeather?.detailWeather[0],
     selectedWeather?.selectedCondition[0],
   );
 
-  var searchWeatherVM = searchWeather?.searchWeather?.map(
+  let searchWeatherVM = searchWeather?.searchWeather?.map(
     searchWeatherEntity => new SearchWeatherVM(searchWeatherEntity),
   );
 
@@ -63,7 +70,7 @@ export function useWeatherDetail() {
     conditionSelected: ISelectedConditionEntity,
   ) => {
     console.log('run onSelectCondition hook');
-    dispatch(await di.detailWeather.setSelectedCondition(conditionSelected));
+    dispatch(di.detailWeather.setSelectedCondition(conditionSelected));
     detailWeatherVM = new DetailWeatherVM(
       detailWeather?.detailWeather[0],
       selectedWeather?.selectedCondition[0],
@@ -77,10 +84,15 @@ export function useWeatherDetail() {
     di.detailWeather.setSelectedTerritory(territorySelected);
     dispatch(await di.detailWeather.getDetailWeatherLoading());
     dispatch(await di.detailWeather.getDetailWeather());
-    toggleSearch(false);
+    setShowSearch(false);
     detailWeatherVM = new DetailWeatherVM(
       detailWeather?.detailWeather[0],
       selectedWeather?.selectedCondition[0],
+    );
+
+    dispatch(await di.detailWeather.resetSearchWeather());
+    searchWeatherVM = searchWeather?.searchWeather?.map(
+      searchWeatherEntity => new SearchWeatherVM(searchWeatherEntity),
     );
   };
 
@@ -96,6 +108,16 @@ export function useWeatherDetail() {
 
   const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []);
 
+  const toggleSearch = async (toggle: boolean) => {
+    setShowSearch(toggle);
+    if (toggle === false) {
+      dispatch(await di.detailWeather.resetSearchWeather());
+      searchWeatherVM = searchWeather?.searchWeather?.map(
+        searchWeatherEntity => new SearchWeatherVM(searchWeatherEntity),
+      );
+    }
+  };
+
   return {
     theme,
     asyncDetailWeather,
@@ -107,7 +129,10 @@ export function useWeatherDetail() {
     onSelectCondition,
     onSelectTerritory,
     handleTextDebounce,
-    toggleSearch,
+    setShowSearch,
     showSearch,
+    refreshing,
+    onRefresh,
+    toggleSearch,
   };
 }

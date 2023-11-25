@@ -1,8 +1,11 @@
 import {StyleSheet} from 'react-native';
 import {FONTS, mainTheme} from '../../constants/theme';
 import {TTextInputSize, TTextInputVariant} from './textInput.type';
+import {Day} from '@core/initialData/initialData';
 
-export function theme(themeInput: string): Record<TTextInputVariant, any> {
+export function theme(
+  themeInput: string = Day,
+): Record<TTextInputVariant, any> {
   return {
     primary1: mainTheme(themeInput).text,
     primary2: mainTheme(themeInput).tint,

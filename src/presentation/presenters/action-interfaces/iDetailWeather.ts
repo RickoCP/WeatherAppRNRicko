@@ -50,4 +50,5 @@ export interface IDetailWeatherActions {
   ): ISearchWeatherAction;
   getSearchWeatherError(err: any): ISearchWeatherAction;
   getSearchWeatherLoading(): ISearchWeatherAction;
+  resetSearchWeather(): ISearchWeatherAction;
 }

@@ -1,9 +1,8 @@
 import React from 'react';
-import {Text} from 'react-native';
-import {styles} from '../WeatherDetail.style';
 import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/textComponent';
 import {ButtonComponent} from '@presentation/components/atomicDesign/atoms/button/buttonComponent';
 import {IDetailWeather} from '@presentation/presenters/action-interfaces/iDetailWeather';
+import {styles} from './MainComponent.style';
 
 interface IWeatherDetailError {
   theme: string;
@@ -12,23 +11,26 @@ interface IWeatherDetailError {
 }
 
 function WeatherDetailError({
+  theme,
   weatherDetail,
   asyncWeatherDetail,
-}: IWeatherDetailError) {
+}: Readonly<IWeatherDetailError>) {
   console.log('render WeatherDetailError');
 
   return (
     <>
       <TextComponent
-        style={styles.title}
+        themeInput={theme}
+        variant={'primary1'}
+        size={'largeTitle'}
         text={`error: ${weatherDetail?.error?.message}`}
       />
-      <Text style={styles.title}>error: {weatherDetail?.error?.message}</Text>
       <ButtonComponent
+        themeInput={theme}
         onClick={asyncWeatherDetail}
         variant={'primary3'}
         size={'default'}
-        style={styles.setButtonError}>
+        style={styles().setButtonError}>
         <TextComponent text={'refresh'} variant="primary1" size="h3" />
       </ButtonComponent>
     </>

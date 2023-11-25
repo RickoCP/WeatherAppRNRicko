@@ -6,6 +6,8 @@ const pokomenBG2 = require('../../assets/image/pokemon2.png');
 const pokomenBG3 = require('../../assets/image/pokemon3.png');
 
 const backgroundImage = require('../../assets/image/map-background.png');
+const nightbackgroundImage = require('../../assets/image/nightBackground.png');
+const daybackgroundImage = require('../../assets/image/dayBackground.png');
 
 const PartlyCloudy = require('../../assets/image/partlycloudy.png');
 const ModerateRain = require('../../assets/image/moderaterain.png');
@@ -66,4 +68,6 @@ export default {
   Mist,
   other,
   backgroundImage,
+  nightbackgroundImage,
+  daybackgroundImage,
 };

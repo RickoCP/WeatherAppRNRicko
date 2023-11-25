@@ -1,25 +1,26 @@
 import {StyleSheet} from 'react-native';
 import {mainTheme} from '../../constants/theme';
 import {TButtonSize, TButtonVariant} from './button.type';
+import {Day} from '@core/initialData/initialData';
 
-export function theme(themeInput: string): Record<TButtonVariant, any> {
+export function theme(themeInput: string = Day): Record<TButtonVariant, any> {
   return {
     primary1: {
-      backgroundColor: mainTheme(themeInput).backgroundColor1.color,
-      borderColor: mainTheme(themeInput).backgroundColor1.color,
+      backgroundColor: mainTheme(themeInput).Theme1.color,
+      borderColor: mainTheme(themeInput).Theme4.color,
     },
 
     primary2: {
-      backgroundColor: mainTheme(themeInput).backgroundColor2.color,
-      borderColor: mainTheme(themeInput).backgroundColor1.color,
+      backgroundColor: mainTheme(themeInput).Theme2.color,
+      borderColor: mainTheme(themeInput).Theme3.color,
     },
     primary3: {
-      backgroundColor: mainTheme(themeInput).backgroundColor3.color,
-      borderColor: mainTheme(themeInput).backgroundColor1.color,
+      backgroundColor: mainTheme(themeInput).Theme3.color,
+      borderColor: mainTheme(themeInput).Theme3.color,
     },
     secondary: {
-      backgroundColor: mainTheme(themeInput).borderColor1.color,
-      borderColor: mainTheme(themeInput).backgroundColor1.color,
+      backgroundColor: mainTheme(themeInput).Theme4.color,
+      borderColor: mainTheme(themeInput).Theme3.color,
     },
   };
 }

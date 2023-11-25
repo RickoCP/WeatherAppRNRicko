@@ -65,6 +65,11 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
     return this.actions.getSearchWeatherLoading();
   }
 
+  async resetSearchWeather(): Promise<ISearchWeatherAction> {
+    console.log('run setSearchWeather presenter ');
+    return this.actions.resetSearchWeather();
+  }
+
   setSelectedTerritory(territory: ISelectedTerritoryEntity): void {
     console.log('run setSelectedTerritory presenter');
     this.useCases.setSelectedTerritory(territory);

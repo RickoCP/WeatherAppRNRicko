@@ -2,7 +2,7 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import AuthTemplate from '../../templates/authTemplate/AuthTemplate';
-import LoginComponent from './component/LoginComponent';
+import LoginComponent from '../../organisms/loginComponent/LoginComponent';
 import di from '@core/di';
 
 const Login: React.FC = () => {

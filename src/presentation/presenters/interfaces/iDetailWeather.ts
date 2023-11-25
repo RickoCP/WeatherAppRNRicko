@@ -15,6 +15,7 @@ export interface IDetailWeatherPresenter {
 
   getSearchWeather(territory: string): Promise<ISearchWeatherAction>;
   getSearchWeatherLoading(): Promise<ISearchWeatherAction>;
+  resetSearchWeather(): Promise<ISearchWeatherAction>;
 
   setSelectedTerritory(territory: ISelectedTerritoryEntity): void;
   getSelectedTerritory(): Promise<ISelectedTerritoryEntity>;

@@ -14,7 +14,7 @@ export function ButtonComponent({
   onClick,
   style = {},
   ...props
-}: IButtonProps) {
+}: Readonly<IButtonProps>) {
   const onClickButton = () => {
     onClick();
   };

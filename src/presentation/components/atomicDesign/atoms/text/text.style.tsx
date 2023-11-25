@@ -1,8 +1,9 @@
 import {StyleSheet} from 'react-native';
 import {FONTS, mainTheme} from '../../constants/theme';
 import {TTextSize, TTextVariant} from './text.type';
+import {Day} from '@core/initialData/initialData';
 
-export function theme(themeInput: string): Record<TTextVariant, any> {
+export function theme(themeInput: string = Day): Record<TTextVariant, any> {
   return {
     primary1: mainTheme(themeInput).text,
     primary2: mainTheme(themeInput).tint,

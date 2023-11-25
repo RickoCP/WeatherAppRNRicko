@@ -16,6 +16,9 @@ export const COLORS = {
   white: '#FFFFFF',
   black: '#000000',
 
+  whiteTrans: '#FFFFFFc0',
+  blackTrans: '#000000c0',
+
   transparent: 'transparent',
 
   tintColorLight: '#0005',
@@ -23,6 +26,16 @@ export const COLORS = {
 
   SelectedTintColorLight: '#0009',
   SelectedTintColorDark: '#0009',
+
+  Theme1: '#6B240C77',
+  Theme2: '#994D1C77',
+  Theme3: '#E48F4577',
+  Theme4: '#F5CCA077',
+
+  WHITE: '#fff',
+  BLACK: '#000',
+  YELLOW_COLOR: '#FFE142',
+  ALERT: '#ED4F32',
 };
 export const SIZES = {
   // global sizes
@@ -74,10 +87,16 @@ export const theme1 = {
   bgWhite: (opacity: any) => `rgba(0,0,0, ${opacity})`,
 
   text: '#000',
-  background: '#fff',
+  background: '#ffffff99',
   tint: COLORS.tintColorLight,
-  tabIconDefault: COLORS.tintColorLight,
-  tabIconSelected: COLORS.SelectedTintColorLight,
+
+  tabIconDefault: COLORS.Theme4,
+  tabIconSelected: COLORS.Theme2,
+
+  Theme1: COLORS.Theme1,
+  Theme2: COLORS.Theme2,
+  Theme3: COLORS.Theme3,
+  Theme4: COLORS.Theme4,
 };
 
 export const theme2 = {
@@ -86,15 +105,20 @@ export const theme2 = {
   backgroundColor2: COLORS.primary2_2,
   backgroundColor3: COLORS.primary2_3,
   borderColor1: COLORS.secondary2,
-  textColor: COLORS.black,
-  textColor2: COLORS.white,
+  textColor: COLORS.white,
+  textColor2: COLORS.black,
   bgWhite: (opacity: any) => `rgba(255,255,255, ${opacity})`,
 
   text: '#fff',
-  background: '#000',
+  background: '#00000099',
   tint: COLORS.tintColorDark,
-  tabIconDefault: COLORS.tintColorDark,
-  tabIconSelected: COLORS.SelectedTintColorDark,
+  tabIconDefault: COLORS.Theme3,
+  tabIconSelected: COLORS.Theme1,
+
+  Theme1: COLORS.Theme1,
+  Theme2: COLORS.Theme2,
+  Theme3: COLORS.Theme3,
+  Theme4: COLORS.Theme4,
 };
 
 export function mainTheme(theme: string): any {
@@ -131,6 +155,18 @@ export function mainTheme(theme: string): any {
     },
     tabIconSelected: {
       color: theme === Day ? theme1.tabIconSelected : theme2.tabIconSelected,
+    },
+    Theme1: {
+      color: theme === Day ? theme1.Theme1 : theme2.Theme1,
+    },
+    Theme2: {
+      color: theme === Day ? theme1.Theme2 : theme2.Theme2,
+    },
+    Theme3: {
+      color: theme === Day ? theme1.Theme3 : theme2.Theme3,
+    },
+    Theme4: {
+      color: theme === Day ? theme1.Theme4 : theme2.Theme4,
     },
   });
 }

@@ -1,20 +1,30 @@
 import React, {memo} from 'react';
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import useHeader from './Header.hook';
 import {styles} from './Header.style';
 import {ButtonComponent} from '../../atoms/button/buttonComponent';
 import {TextComponent} from '../../atoms/text/textComponent';
+interface IHeader {
+  theme: string;
+}
 
-const Header: React.FC = () => {
+function Header({theme}: Readonly<IHeader>) {
   const {handleClickLogout} = useHeader();
   console.log('render Header');
 
   return (
     <View style={styles.headerView}>
       <View style={styles.title}>
-        <Text style={styles.titleText}>Weather App</Text>
+        <TextComponent
+          themeInput={theme}
+          variant={'primary1'}
+          size={'h1'}
+          text={'Weather App'}
+        />
       </View>
+
       <ButtonComponent
+        themeInput={theme}
         onClick={handleClickLogout}
         variant={'primary3'}
         size={'default'}
@@ -23,7 +33,7 @@ const Header: React.FC = () => {
       </ButtonComponent>
     </View>
   );
-};
+}
 
 export default memo(Header);
 // export default Header;

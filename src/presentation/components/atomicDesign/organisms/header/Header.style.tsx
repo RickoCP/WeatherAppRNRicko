@@ -5,11 +5,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     paddingLeft: 20,
-    paddingRight: 20,
     paddingTop: 5,
     paddingBottom: 5,
-    borderBottomWidth: 1,
-    borderColor: '#dddddd',
   },
 
   title: {

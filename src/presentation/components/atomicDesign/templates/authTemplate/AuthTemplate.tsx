@@ -1,12 +1,13 @@
 import React from 'react';
-import {ImageBackground, StyleSheet, View} from 'react-native';
+import {ImageBackground, View} from 'react-native';
 import {images} from '../../constants';
+import {styles} from './AuthTemplate.style';
 
 const AuthTemplate = ({children}: any) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={images.pokomenBG1}
+        source={images.backgroundImage}
         resizeMode="cover"
         style={styles.image}>
         {children}
@@ -16,21 +17,3 @@ const AuthTemplate = ({children}: any) => {
 };
 
 export default AuthTemplate;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  image: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  text: {
-    color: 'white',
-    fontSize: 42,
-    lineHeight: 84,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    backgroundColor: '#000000c0',
-  },
-});

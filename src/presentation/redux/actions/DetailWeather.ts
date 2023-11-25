@@ -89,6 +89,18 @@ class DetailWeatherActions implements IDetailWeatherActions {
     };
   }
 
+  resetSearchWeather(): ISearchWeatherAction {
+    console.log('run getSearchWeather action');
+    return {
+      type: GET_SEARCHWEATHERSUCCESS,
+      payload: {
+        searchWeather: [],
+        isLoading: false,
+        error: {},
+      },
+    };
+  }
+
   getSearchWeatherError(err: any): ISearchWeatherAction {
     console.log('run getSearchWeatherError action');
     return {

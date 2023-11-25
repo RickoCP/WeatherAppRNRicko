@@ -1,53 +1,53 @@
 import React, {memo} from 'react';
-import {TextInput, View, Keyboard, TouchableOpacity, Text} from 'react-native';
+import {View, TouchableOpacity, TextInput} from 'react-native';
+import Icon from 'react-native-vector-icons/AntDesign';
 import {styles} from './SearchBar.style';
-import {ButtonComponent} from '../../atoms/button/buttonComponent';
-import {TextComponent} from '../../atoms/text/textComponent';
+import {mainTheme} from '../../constants/theme';
 
-function SearchBar({clicked, searchPhrase, setSearchPhrase, setClicked}: any) {
-  console.log('render SearchBar');
+interface ISearchBar {
+  theme: string;
+  showSearch: boolean;
+  toggleSearch: (showSearch: boolean) => void;
+  handleTextDebounce: (territory: string) => void;
+}
+
+function SearchBar({
+  theme,
+  showSearch,
+  toggleSearch,
+  handleTextDebounce,
+}: Readonly<ISearchBar>) {
+  console.log('render SearchBar Molecule');
+
   return (
-    <View style={styles.container}>
-      <View
-        style={
-          clicked ? styles.searchBar__clicked : styles.searchBar__unclicked
-        }>
+    <View
+      className="flex-row justify-end items-center rounded-full"
+      style={
+        showSearch
+          ? styles(theme).showSearchWrapper
+          : styles(theme).hideSearchWrapper
+      }>
+      {showSearch ? (
         <TextInput
-          style={styles.input}
-          placeholder="Search"
-          value={searchPhrase}
-          onChangeText={setSearchPhrase}
-          onFocus={() => {
-            setClicked(true);
-          }}
+          onChangeText={handleTextDebounce}
+          placeholder="Search city"
+          placeholderTextColor={'lightgray'}
+          className="pl-6 h-10 pb-1 flex-1"
+          style={styles(theme).text}
         />
-        {clicked && (
-          <TouchableOpacity
-            onPress={() => {
-              setSearchPhrase('');
-            }}>
-            <Text style={styles.cancel}>X</Text>
-          </TouchableOpacity>
+      ) : null}
+      <TouchableOpacity
+        onPress={() => toggleSearch(!showSearch)}
+        className="rounded-full p-3 m-1"
+        style={styles(theme).iconSearchWrapper}>
+        {showSearch ? (
+          <Icon name="close" size={25} color={mainTheme(theme).text.color} />
+        ) : (
+          <Icon name="search1" size={25} color={mainTheme(theme).text.color} />
         )}
-      </View>
-      {clicked && (
-        <View style={styles.cancelButton}>
-          <ButtonComponent
-            onClick={() => {
-              Keyboard.dismiss();
-              setClicked(false);
-              setSearchPhrase('');
-            }}
-            variant={'primary3'}
-            size={'default'}
-            style={styles.cancelButton}>
-            <TextComponent text="Cancel" variant="primary1" size="h3" />
-          </ButtonComponent>
-        </View>
-      )}
+      </TouchableOpacity>
     </View>
   );
 }
-export default memo(SearchBar);
 
-// styles
+export default memo(SearchBar);

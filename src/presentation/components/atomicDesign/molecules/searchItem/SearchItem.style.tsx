@@ -4,6 +4,10 @@ import {Day} from '@core/initialData/initialData';
 
 export function styles(themeInput: string = Day): any {
   return StyleSheet.create({
+    setButtonError: {
+      margin: 20,
+      height: 50,
+    },
     searchWrapper: {
       height: '7%',
     },

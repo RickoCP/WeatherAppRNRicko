@@ -1,7 +1,7 @@
 import Field from '@presentation/components/atomicDesign/molecules/field/Field';
 import React, {useState} from 'react';
 import {View} from 'react-native';
-import {styles} from '../Login.styles';
+import {styles} from './LoginComponent.styles';
 import {ButtonComponent} from '@presentation/components/atomicDesign/atoms/button/buttonComponent';
 import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/textComponent';
 
