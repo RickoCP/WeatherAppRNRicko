@@ -1,9 +1,10 @@
 import React, {memo} from 'react';
 import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/textComponent';
-import {TouchableOpacity, Text, Image} from 'react-native';
+import {TouchableOpacity, Text} from 'react-native';
 import {IForecastdayHour} from '@domains/entities/interfaces/iForecastWeather';
 import {ISelectedConditionEntity} from '@domains/entities/interfaces/iSelectedCondition';
 import {mainTheme} from '../../constants/theme';
+import FastImage from 'react-native-fast-image';
 
 interface IForecastCard {
   selectedCondition: ISelectedConditionEntity;
@@ -36,9 +37,9 @@ function ForecastCard({
             ? mainTheme(theme).tabIconSelected.color
             : mainTheme(theme).tabIconDefault.color,
       }}>
-      <Image
-        source={{uri: 'https:' + item?.forecastday_icon}}
+      <FastImage
         className="w-11 h-11"
+        source={{uri: 'https:' + item?.forecastday_icon}}
       />
       <Text className="text-base font-semibold" style={mainTheme(theme).text}>
         {item?.forecastday_temp_c}&#176;

@@ -13,5 +13,5 @@ export function convertToSingleArray(
     x => x.forecastday_time === roundToNearestHour(CurentTime),
   );
 
-  return dataConverted?.slice(startId, dataConverted.length);
+  return dataConverted?.slice(startId, startId + 24);
 }

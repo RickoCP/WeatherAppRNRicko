@@ -26,7 +26,7 @@ function Header({theme}: Readonly<IHeader>) {
       <ButtonComponent
         themeInput={theme}
         onClick={handleClickLogout}
-        variant={'primary3'}
+        variant={'primary1'}
         size={'default'}
         style={styles.logoutBtn}>
         <TextComponent text={'Logout'} variant="primary1" size="h3" />

@@ -1,7 +1,6 @@
 import React, {memo} from 'react';
 import {View, Text} from 'react-native';
 import {IDetailWeatherVM} from '@presentation/vm/DetailWeather';
-import {weatherImages} from '@presentation/components/atomicDesign/constants/image';
 import {mainTheme} from '@presentation/components/atomicDesign/constants/theme';
 import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/textComponent';
 import FastImage from 'react-native-fast-image';
@@ -21,7 +20,7 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
     <View className="mx-4 flex justify-between flex-1 mb-2">
       <View className="flex flex-row justify-between p-4">
         {/* location */}
-        <View className="flex gap-4">
+        <View className="flex gap-4 flex-1">
           <TextComponent
             themeInput={theme}
             variant={'primary1'}
@@ -41,7 +40,7 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
         </View>
 
         {/* weather icon */}
-        <View className="flex justify-center gap-2">
+        <View className="flex justify-center content-center gap-2">
           <TextComponent
             themeInput={theme}
             variant={'primary1'}
@@ -49,15 +48,12 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
             text={forecastWeather?.condition_text}
             className={'space-y-2 text-center flex-col'}
           />
-          <View style={styles(theme).mainIconWrapper}>
+          <View
+            style={styles(theme).mainIconWrapper}
+            className={'content-center justify-center'}>
             <FastImage
               style={styles(theme).mainIconStyle}
-              source={
-                weatherImages[
-                  (forecastWeather?.condition_text ||
-                    'other') as keyof typeof weatherImages
-                ]
-              }
+              source={{uri: 'https:' + forecastWeather?.condition_icon}}
               resizeMode={FastImage.resizeMode.contain}
             />
           </View>
