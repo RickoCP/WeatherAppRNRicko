@@ -1,4 +1,5 @@
 export const initialSelected = {
+  id: 0,
   name: 'Jakarta',
   region: 'akarta Raya',
   country: 'Indonesia',

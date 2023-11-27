@@ -71,6 +71,7 @@ class DetailWeatherRepository implements IDetailWeatherRepository {
   setSelectedTerritory(territory: ISelectedTerritoryDTO): void {
     console.log('run setSelectedTerritory repository');
     const territoryData = {
+      id: territory.id,
       name: territory.name,
       region: territory.region,
       country: territory.country,
