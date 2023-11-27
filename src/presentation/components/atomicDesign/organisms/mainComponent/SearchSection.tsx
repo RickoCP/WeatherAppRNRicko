@@ -39,7 +39,7 @@ function SearchSection({
             let showBorder = index + 1 !== locations.length;
             return (
               <SearchItem
-                key={index}
+                key={loc.id}
                 showBorder={showBorder}
                 theme={theme}
                 loc={loc}

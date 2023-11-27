@@ -24,7 +24,6 @@ class DetailWeatherActions implements IDetailWeatherActions {
     DetailWeatherEntity: IDetailWeatherEntity,
   ): IDetailWeatherAction {
     console.log('run getDetailWeather action');
-    // console.log('DetailWeatherEntity.selectedCondition: ', DetailWeatherEntity);
     return {
       type: GET_DETAILWEATHERSUCCESS,
       payload: {
@@ -66,7 +65,6 @@ class DetailWeatherActions implements IDetailWeatherActions {
     condition: ISelectedConditionEntity,
   ): ISelectedConditionAction {
     console.log('run setSelectedCondition action');
-    // console.log('run setSelectedCondition action: condition', condition);
     return {
       type: SET_SELECTEDWEATHER,
       payload: {

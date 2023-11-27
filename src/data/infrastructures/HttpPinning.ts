@@ -1,5 +1,4 @@
 import {IHttp, IRequestOption} from './interfaces/iHttp';
-// import {fetch} from 'react-native-ssl-pinning';
 
 class HttpPinning implements IHttp {
   request(requestOption: IRequestOption): any {

@@ -1,4 +1,5 @@
 export interface ISelectedTerritoryParams {
+  id: number;
   name: string;
   region: string;
   country: string;
@@ -6,6 +7,7 @@ export interface ISelectedTerritoryParams {
 }
 
 export interface ISelectedTerritoryDTO {
+  readonly id: number;
   readonly name: string;
   readonly region: string;
   readonly country: string;
@@ -13,12 +15,14 @@ export interface ISelectedTerritoryDTO {
 }
 
 class SelectedTerritoryDTO implements ISelectedTerritoryDTO {
+  readonly id: number;
   readonly name: string;
   readonly region: string;
   readonly country: string;
   readonly url: string;
 
   constructor(param: ISelectedTerritoryParams) {
+    this.id = param.id;
     this.name = param.name;
     this.region = param.region;
     this.country = param.country;

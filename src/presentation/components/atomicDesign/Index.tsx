@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaView, StatusBar, View} from 'react-native';
 import {styles} from './index.style';
 import useIndex from './index.hook';
-// import JailMonkey from 'jail-monkey';
+import JailMonkey from 'jail-monkey';
 import Login from './pages/login/Login';
 import ModalComp from './molecules/modalComp/ModalComp';
 import WeatherDetail from './pages/main/WeatherDetail';
@@ -15,8 +15,7 @@ const Index: React.FC = () => {
       <StatusBar barStyle="default" />
       <SafeAreaView>
         <View style={styles.baseView}>
-          {/* <ModalComp isShow={JailMonkey.isJailBroken()} /> */}
-          <ModalComp isShow={false} />
+          <ModalComp isShow={JailMonkey.isJailBroken()} />
           {token === '' && <Login />}
           {token !== '' && <WeatherDetail />}
         </View>

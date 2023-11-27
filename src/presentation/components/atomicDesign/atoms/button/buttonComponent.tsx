@@ -25,7 +25,6 @@ export function ButtonComponent({
         style={pressed => [
           styles.buttonPrimer,
           pressed && theme(themeInput)[variant],
-          ,
           buttonSize[size],
         ]}
         disabled={disabled}

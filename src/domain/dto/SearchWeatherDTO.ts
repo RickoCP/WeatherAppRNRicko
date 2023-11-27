@@ -9,6 +9,7 @@ export interface ISearchWeatherParams {
 }
 
 export interface ISearchWeatherDTO {
+  readonly id: number;
   readonly name: string;
   readonly region: string;
   readonly country: string;
@@ -16,12 +17,14 @@ export interface ISearchWeatherDTO {
 }
 
 class SearchWeatherDTO implements ISearchWeatherDTO {
+  readonly id: number;
   readonly name: string;
   readonly region: string;
   readonly country: string;
   readonly url: string;
 
   constructor(param: ISearchWeatherParams) {
+    this.id = param.id;
     this.name = param.name;
     this.region = param.region;
     this.country = param.country;

@@ -1,6 +1,7 @@
 import {ISelectedTerritoryEntity} from '@domains/entities/interfaces/iSelectedTerritory';
 
 export interface ISearchWeatherVM {
+  id: number;
   name: string;
   region: string;
   country: string;
@@ -8,16 +9,22 @@ export interface ISearchWeatherVM {
 }
 
 class SearchWeatherVM implements ISearchWeatherVM {
+  private readonly _id: number;
   private readonly _name: string;
   private readonly _region: string;
   private readonly _country: string;
   private readonly _url: string;
 
   constructor(params: ISelectedTerritoryEntity) {
+    this._id = params?.id;
     this._name = params?.name;
     this._region = params?.region;
     this._country = params?.country;
     this._url = params?.url;
+  }
+
+  get id() {
+    return this._id;
   }
 
   get name() {

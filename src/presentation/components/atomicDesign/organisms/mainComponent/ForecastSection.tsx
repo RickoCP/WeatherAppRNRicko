@@ -40,7 +40,7 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
         </View>
 
         {/* weather icon */}
-        <View className="flex justify-center content-center gap-2">
+        <View className="flex justify-center gap-2">
           <TextComponent
             themeInput={theme}
             variant={'primary1'}
@@ -50,7 +50,7 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
           />
           <View
             style={styles(theme).mainIconWrapper}
-            className={'content-center justify-center'}>
+            className={'content-center justify-center self-center'}>
             <FastImage
               style={styles(theme).mainIconStyle}
               source={{uri: 'https:' + forecastWeather?.condition_icon}}

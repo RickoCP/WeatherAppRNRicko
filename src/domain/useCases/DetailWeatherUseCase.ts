@@ -62,13 +62,11 @@ class DetailWeatherUseCase implements IDetailWeatherUseCase {
     const selectedTerritory =
       await this.detailWeatherRepo.getSelectedTerritory();
     const selectedTerritoryData = new SelectedTerritory(selectedTerritory);
-    // console.log('result getSelectedTerritory usecase: ', selectedTerritoryData);
     return selectedTerritoryData;
   }
 
   setSelectedTerritory(territory: ISelectedTerritoryEntity): void {
     console.log('run setSelectedTerritory usecase');
-    // console.log('run setSelectedTerritory usecase: territory: ', territory);
     this.detailWeatherRepo.setSelectedTerritory(territory);
   }
 }

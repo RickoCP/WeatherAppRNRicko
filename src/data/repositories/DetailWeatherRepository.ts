@@ -58,12 +58,7 @@ class DetailWeatherRepository implements IDetailWeatherRepository {
       const selectedTerritoryStorage = JSON.parse(
         dataSelectedTerritory.password,
       );
-      // console.log(
-      //   'run getSelectedTerritory repository: success: ',
-      //   selectedTerritoryStorage,
-      // );
       return selectedTerritoryStorage;
-      // return initialSelected;
     } else {
       console.log(
         'run getSelectedTerritory repository: error: ',

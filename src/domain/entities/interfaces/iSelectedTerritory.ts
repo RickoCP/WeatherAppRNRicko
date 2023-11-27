@@ -1,4 +1,5 @@
 export interface ISelectedTerritoryEntity {
+  id: number;
   name: string;
   region: string;
   country: string;
@@ -6,6 +7,7 @@ export interface ISelectedTerritoryEntity {
 }
 
 export interface ISelectedTerritoryData {
+  id: number;
   name: string;
   region: string;
   country: string;

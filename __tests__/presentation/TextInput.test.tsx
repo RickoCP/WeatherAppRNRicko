@@ -22,24 +22,4 @@ test('render text input Properly', () => {
   const textInput = getByPlaceholderText(/placeholder/i);
   expect(textInput.props.placeholder).toEqual(placeholder);
   expect(textInput.props.value).toEqual(value);
-  // expect(textInput.props.style).toMatchObject([
-  //   {
-  //     borderColor: '#bbbbbb',
-  //     borderWidth: 3,
-  //     color: '#000000',
-  //     borderRadius: 15,
-  //     height: 50,
-  //     marginBottom: 10,
-  //     paddingLeft: 10,
-  //     paddingRight: 10,
-  //   },
-  //   {
-  //     color: '#000',
-  //   },
-  //   {
-  //     fontFamily: 'Roboto-Black',
-  //     fontSize: 40,
-  //   },
-  //   {},
-  // ]);
 });

@@ -29,7 +29,7 @@ const selectedWeather: IReducer = (
       };
     case GET_DETAILWEATHERSUCCESS:
       return {
-        selectedCondition: action?.payload?.selectedCondition,
+        selectedCondition: action?.payload.selectedCondition,
       };
     default:
       return {

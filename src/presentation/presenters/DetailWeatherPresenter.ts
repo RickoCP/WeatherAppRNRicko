@@ -21,7 +21,7 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
     try {
       const DetailWeatherEntity: IDetailWeatherEntity =
         await this.useCases.getDetailWeather();
-      await this.setSelectedCondition(DetailWeatherEntity.selectedCondition);
+      this.setSelectedCondition(DetailWeatherEntity.selectedCondition);
       return this.actions.getDetailWeather(DetailWeatherEntity);
     } catch (err: any) {
       console.log('error getDetailWeather presenter:', err);
@@ -38,7 +38,6 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
     territory: ISelectedConditionEntity,
   ): ISelectedConditionAction {
     console.log('run setSelectedCondition presenter ');
-    // return this.actions.setSelectedCondition(territory);
     return this.actions.setSelectedCondition({
       selected_time: territory.selected_time,
       selected_temp_c: territory.selected_temp_c,
