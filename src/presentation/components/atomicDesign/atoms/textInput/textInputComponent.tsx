@@ -14,7 +14,7 @@ export function TextInputComponent({
   placeholder = '',
   style = {},
   ...props
-}: ITextInputProps) {
+}: Readonly<ITextInputProps>) {
   return (
     <TextInput
       style={[

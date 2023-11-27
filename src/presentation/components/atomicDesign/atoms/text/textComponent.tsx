@@ -13,7 +13,7 @@ export function TextComponent({
   style = {},
   onPress,
   ...props
-}: ITextProps) {
+}: Readonly<ITextProps>) {
   return (
     <View>
       <Text
