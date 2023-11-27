@@ -4,7 +4,6 @@ import {useDispatch} from 'react-redux';
 import AuthTemplate from '../../templates/authTemplate/AuthTemplate';
 import LoginComponent from '../../organisms/loginComponent/LoginComponent';
 import di from '@core/di';
-import {TextComponent} from '../../atoms/text/textComponent';
 
 const Login: React.FC = () => {
   const dispatch = useDispatch();
