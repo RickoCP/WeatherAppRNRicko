@@ -9,6 +9,7 @@ import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/te
 import DetailForecastCard from '../../molecules/detailForecastCard/DetailForecastCard';
 import ForecastCard from '../../molecules/forecastCard/ForecastCard';
 import {styles} from './MainComponent.style';
+import {images} from '../../constants';
 
 interface IForecastNextDay {
   theme: string;
@@ -78,19 +79,19 @@ function ForecastNextDay({
           style={styles(theme).detailStatus}>
           <DetailForecastCard
             detail={selectedCondition?.selected_wind_dir}
-            icon={require('../../../assets/animation/wind.json')}
+            icon={images.windIcon}
             text={'Wind'}
             theme={theme}
           />
           <DetailForecastCard
             detail={selectedCondition?.selected_humidity}
-            icon={require('../../../assets/animation/humidity.json')}
+            icon={images.humidityIcon}
             text={'Humidity'}
             theme={theme}
           />
           <DetailForecastCard
             detail={selectedCondition?.selected_uv}
-            icon={require('../../../assets/animation/eye1.json')}
+            icon={images.uvIcon}
             text={'UV'}
             theme={theme}
           />

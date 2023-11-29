@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     backgroundColor: '#FFFFFFDD',
     margin: 20,
     borderRadius: 20,
+    gap: 10,
   },
   image: {
     padding: 20,

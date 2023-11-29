@@ -40,7 +40,7 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
         </View>
 
         {/* weather icon */}
-        <View className="flex justify-center gap-2">
+        <View className="flex justify-center gap-2 flex-1">
           <TextComponent
             themeInput={theme}
             variant={'primary1'}

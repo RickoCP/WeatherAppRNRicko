@@ -7,7 +7,7 @@ import {TextComponent} from '../../atoms/text/textComponent';
 
 interface IDetailForecastCard {
   detail: string | number;
-  icon: string;
+  icon: any;
   text: string;
   theme: string;
 }

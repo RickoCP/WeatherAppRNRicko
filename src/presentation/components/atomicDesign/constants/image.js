@@ -1,9 +1,5 @@
 /* eslint-disable prettier/prettier */
-const pokemonLogo1 = require('../../assets/image/pokemon Logo.png');
-const pokemonLogo2 = require('../../assets/image/pokemon Logo2.png');
-const pokomenBG1 = require('../../assets/image/pokemon1.png');
-const pokomenBG2 = require('../../assets/image/pokemon2.png');
-const pokomenBG3 = require('../../assets/image/pokemon3.png');
+
 
 const backgroundImage = require('../../assets/image/map-background.png');
 const nightbackgroundImage = require('../../assets/image/nightBackground.png');
@@ -25,6 +21,11 @@ const ModerateOrHeavyRainShower = require('../../assets/image/heavyrain.png');
 const ModerateOrHeavyRainWithThunder = require('../../assets/image/heavyrain.png');
 const Mist = require('../../assets/image/mist.png');
 const other = require('../../assets/image/moderaterain.png');
+const WeatherIcon = require('../../assets/image/weatherIcon.png');
+
+const windIcon = require('../../assets/animation/wind.json');
+const humidityIcon = require('../../assets/animation/humidity.json');
+const uvIcon = require('../../assets/animation/eye1.json');
 
 export const weatherImages = {
   'Partly cloudy': PartlyCloudy,
@@ -46,11 +47,6 @@ export const weatherImages = {
 };
 
 export default {
-  pokemonLogo1,
-  pokemonLogo2,
-  pokomenBG1,
-  pokomenBG2,
-  pokomenBG3,
   PartlyCloudy,
   ModerateRain,
   PatchyRainPossible,
@@ -70,4 +66,8 @@ export default {
   backgroundImage,
   nightbackgroundImage,
   daybackgroundImage,
+  WeatherIcon,
+  windIcon,
+  humidityIcon,
+  uvIcon,
 };
