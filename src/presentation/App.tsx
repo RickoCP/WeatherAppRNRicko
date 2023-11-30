@@ -4,6 +4,7 @@ import {AppRegistry} from 'react-native';
 import {name as appName} from '../../app.json';
 import store from './redux/store';
 import Index from './components/atomicDesign/Index';
+import CodePush from 'react-native-code-push';
 
 export const App = () => {
   return (
@@ -13,4 +14,4 @@ export const App = () => {
   );
 };
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => CodePush(App));
