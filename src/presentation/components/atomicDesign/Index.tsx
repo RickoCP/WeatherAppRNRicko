@@ -6,9 +6,10 @@ import JailMonkey from 'jail-monkey';
 import Login from './pages/login/Login';
 import ModalComp from './molecules/modalComp/ModalComp';
 import WeatherDetail from './pages/main/WeatherDetail';
+import SplashScreen from './pages/Splash/SplashScreen';
 
 const Index: React.FC = () => {
-  const {token} = useIndex();
+  const {token, loading} = useIndex();
 
   return (
     <>
@@ -16,8 +17,9 @@ const Index: React.FC = () => {
       <SafeAreaView>
         <View style={styles.baseView}>
           <ModalComp isShow={JailMonkey.isJailBroken()} />
-          {token === '' && <Login />}
-          {token !== '' && <WeatherDetail />}
+          {loading && <SplashScreen />}
+          {!loading && token === '' && <Login />}
+          {!loading && token !== '' && <WeatherDetail />}
         </View>
       </SafeAreaView>
     </>
