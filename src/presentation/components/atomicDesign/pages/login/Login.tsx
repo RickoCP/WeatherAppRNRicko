@@ -4,6 +4,8 @@ import {useDispatch} from 'react-redux';
 import AuthTemplate from '../../templates/authTemplate/AuthTemplate';
 import LoginComponent from '../../organisms/loginComponent/LoginComponent';
 import di from '@core/di';
+import FastImage from 'react-native-fast-image';
+import {images} from '../../constants';
 
 const Login: React.FC = () => {
   const dispatch = useDispatch();

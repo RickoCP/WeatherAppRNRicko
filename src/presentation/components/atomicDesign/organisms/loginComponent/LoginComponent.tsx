@@ -25,6 +25,12 @@ function LoginComponent({handleClickLogin}: any) {
 
   return (
     <View style={styles.loginForm}>
+      <TextComponent
+        text={'WeatherApp'}
+        variant="primary1"
+        size="largeTitle"
+        className="text-center	"
+      />
       <Field
         label={'Username'}
         variant={'primary2'}

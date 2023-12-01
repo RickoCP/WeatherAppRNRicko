@@ -1,0 +1,127 @@
+[2023-11-29 10:24:17Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'Credentials': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'Runner': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.runner'
+[2023-11-29 10:24:17Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2023-11-29 10:24:17Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19041.
+[2023-11-29 10:24:17Z INFO Listener] Version: 2.311.0
+[2023-11-29 10:24:17Z INFO Listener] Commit: f5cff308c83746dddd726a9a28a1583872305aaa
+[2023-11-29 10:24:17Z INFO Listener] Culture: en-US
+[2023-11-29 10:24:17Z INFO Listener] UI Culture: en-GB
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO Listener] Validating directory permissions for: 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO CommandLineParser] Parse
+[2023-11-29 10:24:17Z INFO CommandLineParser] Parsing 1 args
+[2023-11-29 10:24:17Z INFO CommandLineParser] parsing argument
+[2023-11-29 10:24:17Z INFO CommandLineParser] HasArgs: False
+[2023-11-29 10:24:17Z INFO CommandLineParser] Adding Command: run
+[2023-11-29 10:24:17Z INFO Listener] Arguments parsed
+[2023-11-29 10:24:17Z INFO Runner] ExecuteCommand
+[2023-11-29 10:24:17Z INFO ConfigurationStore] currentAssemblyLocation: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin\Runner.Listener.dll
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] binPath: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] RootFolder: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'Runner': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.runner'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] ConfigFilePath: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.runner
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'Credentials': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] CredFilePath: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'MigratedCredentials': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials_migrated'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] MigratedCredFilePath: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials_migrated
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'Service': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.service'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] ServiceConfigFilePath: D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.service
+[2023-11-29 10:24:17Z INFO CommandSettings] Flag 'help': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Flag 'version': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Flag 'commit': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Flag 'check': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Command 'configure': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Command 'remove': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Command 'warmup': 'False'
+[2023-11-29 10:24:17Z INFO ConfigurationManager] LoadSettings
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsConfigured()
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsConfigured: True
+[2023-11-29 10:24:17Z INFO ConfigurationManager] Is configured: True
+[2023-11-29 10:24:17Z INFO ConfigurationStore] Read setting file: 314 chars
+[2023-11-29 10:24:17Z INFO ConfigurationManager] Settings Loaded
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsServiceConfigured: False
+[2023-11-29 10:24:17Z INFO CommandSettings] Command 'run': 'True'
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsConfigured()
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsConfigured: True
+[2023-11-29 10:24:17Z INFO ConfigurationManager] Is configured: True
+[2023-11-29 10:24:17Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2023-11-29 10:24:17Z INFO Runner] Set runner startup type - Manual
+[2023-11-29 10:24:17Z INFO CommandSettings] Flag 'once': 'False'
+[2023-11-29 10:24:17Z INFO CommandSettings] Flag 'once': 'False'
+[2023-11-29 10:24:17Z INFO Runner] RunAsync
+[2023-11-29 10:24:17Z INFO ConfigurationManager] LoadSettings
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsConfigured()
+[2023-11-29 10:24:17Z INFO ConfigurationStore] IsConfigured: True
+[2023-11-29 10:24:17Z INFO ConfigurationManager] Is configured: True
+[2023-11-29 10:24:17Z INFO ConfigurationManager] Settings Loaded
+[2023-11-29 10:24:17Z INFO MessageListener] {
+  "AgentId": 2,
+  "AgentName": "DESKTOP-L0SFLFI",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus5.actions.githubusercontent.com/90zwvIPTzep4wogZbIjdyYv4s6guYroUDEkQqNhV28p92ONipF/",
+  "GitHubUrl": "https://github.com/RickoCP/WeatherAppRNRicko",
+  "WorkFolder": "_work"
+}
+[2023-11-29 10:24:17Z INFO MessageListener] Loading Credentials
+[2023-11-29 10:24:17Z INFO ConfigurationStore] HasCredentials()
+[2023-11-29 10:24:17Z INFO ConfigurationStore] stored True
+[2023-11-29 10:24:17Z INFO CredentialManager] GetCredentialProvider
+[2023-11-29 10:24:17Z INFO CredentialManager] Creating type OAuth
+[2023-11-29 10:24:17Z INFO CredentialManager] Creating credential type: OAuth
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Bin': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\bin'
+[2023-11-29 10:24:17Z INFO HostContext] Well known directory 'Root': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner'
+[2023-11-29 10:24:17Z INFO HostContext] Well known config file 'RSACredentials': 'D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials_rsaparams'
+[2023-11-29 10:24:17Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials_rsaparams
+[2023-11-29 10:24:17Z INFO MessageListener] Attempt to create session.
+[2023-11-29 10:24:17Z INFO MessageListener] Connecting to the Runner Server...
+[2023-11-29 10:24:17Z INFO RunnerServer] EstablishVssConnection
+[2023-11-29 10:24:17Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2023-11-29 10:24:18Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-11-29 10:24:18Z INFO RunnerServer] EstablishVssConnection
+[2023-11-29 10:24:18Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-11-29 10:24:18Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-11-29 10:24:18Z INFO RunnerServer] EstablishVssConnection
+[2023-11-29 10:24:18Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2023-11-29 10:24:18Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2023-11-29 10:24:19Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-11-29 10:24:19Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-11-29 10:24:19Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2023-11-29 10:24:19Z INFO MessageListener] VssConnection created
+[2023-11-29 10:24:19Z INFO Terminal] WRITE LINE: 
+[2023-11-29 10:24:19Z INFO Terminal] WRITE LINE: 
+[2023-11-29 10:24:19Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials_rsaparams
+[2023-11-29 10:24:19Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file D:\Software Developer\React Native\Typescript\WeatherApp\WeatherAppRicko\actions-runner\.credentials_rsaparams
+[2023-11-29 10:24:20Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2023-11-29 10:24:20Z INFO MessageListener] Session created.
+[2023-11-29 10:24:20Z INFO Terminal] WRITE LINE: Current runner version: '2.311.0'
+[2023-11-29 10:24:20Z INFO Terminal] WRITE LINE: 2023-11-29 10:24:20Z: Listening for Jobs
+[2023-11-29 10:24:20Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2023-11-29 10:26:20Z WARN GitHubActionsService] Attempt 1 of GET request to https://pipelinesghubeus5.actions.githubusercontent.com/90zwvIPTzep4wogZbIjdyYv4s6guYroUDEkQqNhV28p92ONipF/_apis/distributedtask/pools/1/messages?sessionId=d24a56bc-4196-48bc-83b4-c180d3636514&status=Online&runnerVersion=2.311.0&os=Windows&architecture=X64 failed (Socket Error: TimedOut). The operation will be retried in 10.977 seconds.
+[2023-11-29 10:54:21Z INFO MessageListener] No message retrieved from session 'd24a56bc-4196-48bc-83b4-c180d3636514' within last 30 minutes.
+[2023-11-29 11:18:10Z INFO Terminal] WRITE LINE: Exiting...
+[2023-11-29 11:18:10Z INFO ConfigurationStore] IsServiceConfigured()
+[2023-11-29 11:18:10Z INFO ConfigurationStore] IsServiceConfigured: False
+[2023-11-29 11:18:10Z INFO HostContext] Runner will be shutdown for UserCancelled
+[2023-11-29 11:18:10Z WARN GitHubActionsService] GET request to https://pipelinesghubeus5.actions.githubusercontent.com/90zwvIPTzep4wogZbIjdyYv4s6guYroUDEkQqNhV28p92ONipF/_apis/distributedtask/pools/1/messages?sessionId=d24a56bc-4196-48bc-83b4-c180d3636514&status=Online&runnerVersion=2.311.0&os=Windows&architecture=X64 has been cancelled.
+[2023-11-29 11:18:10Z INFO MessageListener] Get next message has been cancelled.
+[2023-11-29 11:18:10Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2023-11-29 11:18:12Z INFO Listener] Runner execution been cancelled.
