@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">WeatherAppRicko</string>
     <string moduleConfig="true" name="CodePushDeploymentKey">7RJ6VR9_OIbmUWR9R9LbO38Xqx3GBtGsaR6Fx</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true" translatable="false">DO_NOT_ASK_JAVASCRIPT</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true" translatable="false">ALWAYS_SEND</string>
 </resources>
     
