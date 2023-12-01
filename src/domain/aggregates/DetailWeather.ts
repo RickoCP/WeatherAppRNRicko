@@ -11,6 +11,7 @@ class DetailWeather implements IDetailWeatherEntity {
 
   constructor() {
     this._selectedTerritory = {
+      id: initialSelected.id,
       name: initialSelected.name,
       region: initialSelected.region,
       country: initialSelected.country,

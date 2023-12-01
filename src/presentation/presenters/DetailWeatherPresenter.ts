@@ -9,6 +9,7 @@ import {IDetailWeatherPresenter} from './interfaces/iDetailWeather';
 import {IDetailWeatherEntity} from '@domains/aggregates/interfaces/iDetailWeather';
 import {ISelectedTerritoryEntity} from '@domains/entities/interfaces/iSelectedTerritory';
 import {ISelectedConditionEntity} from '@domains/entities/interfaces/iSelectedCondition';
+import Analytics from 'appcenter-analytics';
 
 class DetailWeatherPresenter implements IDetailWeatherPresenter {
   constructor(
@@ -25,6 +26,9 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
       return this.actions.getDetailWeather(DetailWeatherEntity);
     } catch (err: any) {
       console.log('error getDetailWeather presenter:', err);
+      Analytics.trackEvent('error getDetailWeather', {
+        error: err,
+      });
       return this.actions.getDetailWeatherError(err);
     }
   }
@@ -55,6 +59,9 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
       return this.actions.getSearchWeather(SearchWeatherEntity);
     } catch (err: any) {
       console.log('error getSearchWeather presenter:', err);
+      Analytics.trackEvent('error getSearchWeather', {
+        error: err,
+      });
       return this.actions.getSearchWeatherError(err);
     }
   }
@@ -71,6 +78,9 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
 
   setSelectedTerritory(territory: ISelectedTerritoryEntity): void {
     console.log('run setSelectedTerritory presenter');
+    Analytics.trackEvent('selected territory', {
+      territorySelected: territory.url,
+    });
     this.useCases.setSelectedTerritory(territory);
   }
 
