@@ -26,7 +26,7 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
       return this.actions.getDetailWeather(DetailWeatherEntity);
     } catch (err: any) {
       console.log('error getDetailWeather presenter:', err);
-      Analytics.trackEvent('Log error', {
+      Analytics.trackEvent('error getDetailWeather', {
         error: err,
       });
       return this.actions.getDetailWeatherError(err);
@@ -59,6 +59,9 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
       return this.actions.getSearchWeather(SearchWeatherEntity);
     } catch (err: any) {
       console.log('error getSearchWeather presenter:', err);
+      Analytics.trackEvent('error getSearchWeather', {
+        error: err,
+      });
       return this.actions.getSearchWeatherError(err);
     }
   }
