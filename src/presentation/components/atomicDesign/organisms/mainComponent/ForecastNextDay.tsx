@@ -26,7 +26,9 @@ function ForecastNextDay({
   console.log('render ForecastNextDay Section');
 
   return (
-    <View className="mx-4 flex justify-around flex-1 mb-2">
+    <View
+      className="flex justify-around"
+      style={styles().forecastNextDayWrapper}>
       {/* forecast for next days */}
       <View className="mb-2 space-y-3">
         <View className="flex-row items-center space-x-2">
@@ -60,7 +62,7 @@ function ForecastNextDay({
       </View>
       {/* selected */}
       <View style={styles(theme).detailWrapper}>
-        <View className="flex-row space-x-2 items-center h-10">
+        <View className="flex-row space-x-2 items-center p-2">
           <TextComponent
             themeInput={theme}
             variant={'primary1'}
@@ -75,7 +77,7 @@ function ForecastNextDay({
           />
         </View>
         <View
-          className="flex-row justify-between"
+          // className="flex-row justify-between"
           style={styles(theme).detailStatus}>
           <DetailForecastCard
             detail={selectedCondition?.selected_wind_dir}

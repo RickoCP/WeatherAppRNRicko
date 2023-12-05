@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {FONTS, mainTheme} from '../../constants/theme';
+import {COLORS, FONTS, SIZES, mainTheme} from '../../constants/theme';
 import {TTextInputSize, TTextInputVariant} from './textInput.type';
 import {Day} from '@core/initialData/initialData';
 
@@ -30,13 +30,13 @@ export const textSize: Record<TTextInputSize, any> = {
 
 export const styles = StyleSheet.create({
   inputView: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    height: 50,
-    borderColor: '#bbbbbb',
-    borderWidth: 3,
-    color: '#000000',
-    marginBottom: 10,
-    borderRadius: 15,
+    paddingLeft: SIZES.paddingTextInput,
+    paddingRight: SIZES.paddingTextInput,
+    height: SIZES.heightTextInput,
+    borderColor: COLORS.border,
+    borderWidth: SIZES.borderWidthTextInput,
+    color: COLORS.black,
+    marginBottom: SIZES.marginTextInput,
+    borderRadius: SIZES.borderRadiusTextInput,
   },
 });

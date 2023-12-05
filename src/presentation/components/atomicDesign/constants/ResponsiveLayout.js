@@ -1,15 +1,23 @@
-import {Dimensions} from 'react-native';
-import {
-  heightPercentageToDP as hp2dp,
-  widthPercentageToDP as wp2dp,
-} from 'react-native-responsive-screen';
+import {Dimensions, PixelRatio} from 'react-native';
+
+const widthPercentageToDP = widthPercent => {
+  const screenWidth = Dimensions.get('window').width;
+  const elemWidth = parseFloat(widthPercent);
+  return PixelRatio.roundToNearestPixel((screenWidth * elemWidth) / 100);
+};
+
+const heightPercentageToDP = heightPercent => {
+  const screenHeight = Dimensions.get('window').height;
+  const elemHeight = parseFloat(heightPercent);
+  return PixelRatio.roundToNearestPixel((screenHeight * elemHeight) / 100);
+};
 
 export const wp = dimension => {
-  return wp2dp((dimension / 375) * 100 + '%');
+  return widthPercentageToDP((dimension / 411) * 100 + '%');
 };
 
 export const hp = dimension => {
-  return hp2dp((dimension / 812) * 100 + '%');
+  return heightPercentageToDP((dimension / 832) * 100 + '%');
 };
 
 export const DEVICE_WIDTH = Dimensions.get('window').width;

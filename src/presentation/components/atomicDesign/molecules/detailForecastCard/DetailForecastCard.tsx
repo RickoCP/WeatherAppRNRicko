@@ -1,7 +1,6 @@
 import React, {memo} from 'react';
 import {styles} from './DetaileForecastCard.style';
 import LottieView from 'lottie-react-native';
-import {wp} from '../../constants/ResponsiveLayout';
 import {View} from 'react-native';
 import {TextComponent} from '../../atoms/text/textComponent';
 
@@ -20,15 +19,7 @@ function DetailForecastCard({
 }: Readonly<IDetailForecastCard>) {
   return (
     <View style={styles().cardWrapper}>
-      <LottieView
-        autoPlay
-        source={icon}
-        style={{
-          height: wp(40),
-          width: wp(40),
-        }}
-      />
-
+      <LottieView autoPlay source={icon} style={styles().imageView} />
       <TextComponent
         themeInput={theme}
         variant={'primary1'}
