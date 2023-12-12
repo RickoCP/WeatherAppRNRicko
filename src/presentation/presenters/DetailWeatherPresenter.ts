@@ -25,10 +25,12 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
       this.setSelectedCondition(DetailWeatherEntity.selectedCondition);
       return this.actions.getDetailWeather(DetailWeatherEntity);
     } catch (err: any) {
-      console.log('error getDetailWeather presenter:', err);
-      Analytics.trackEvent('error getDetailWeather', {
-        error: err,
-      });
+      console.log('error getDetailWeather presenter:', err.message);
+      if (err.message !== 'TypeError: Network request failed') {
+        Analytics.trackEvent('error getDetailWeather', {
+          error: err,
+        });
+      }
       return this.actions.getDetailWeatherError(err);
     }
   }
@@ -58,10 +60,12 @@ class DetailWeatherPresenter implements IDetailWeatherPresenter {
         await this.useCases.getSearchWeather(territory);
       return this.actions.getSearchWeather(SearchWeatherEntity);
     } catch (err: any) {
-      console.log('error getSearchWeather presenter:', err);
-      Analytics.trackEvent('error getSearchWeather', {
-        error: err,
-      });
+      console.log('error getSearchWeather presenter:', err.message);
+      if (err.message !== 'TypeError: Network request failed') {
+        Analytics.trackEvent('error getDetailWeather', {
+          error: err,
+        });
+      }
       return this.actions.getSearchWeatherError(err);
     }
   }
