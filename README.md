@@ -9,7 +9,7 @@ Download source code:
 https://github.com/RickoCP/WeatherAppRNRicko/tree/dev
 
 Download apk Android:
-https://drive.google.com/file/d/1HQxe42fFGoW0h14PIgZt9MIP0n7npl1z/view?usp=sharing
+https://drive.google.com/file/d/1gCVPp5FjKY4gEnOLO004gPl7ZbbeQLe3/view?usp=sharing
 
 ## Use Stack
 Typescript, React, React-Native, Redux
