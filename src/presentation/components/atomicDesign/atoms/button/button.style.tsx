@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {mainTheme} from '../../constants/theme';
+import {SIZES, mainTheme} from '../../constants/theme';
 import {TButtonSize, TButtonVariant} from './button.type';
 import {Day} from '@core/initialData/initialData';
 
@@ -26,9 +26,18 @@ export function theme(themeInput: string = Day): Record<TButtonVariant, any> {
 }
 
 export const buttonSize: Record<TButtonSize, any> = {
-  default: {paddingHor: 4, paddingVertical: 2},
-  small: {paddingHor: 4, paddingVertical: 2},
-  large: {paddingHor: 4, paddingVertical: 2},
+  default: {
+    paddingHor: SIZES.paddingHorButton,
+    paddingVertical: SIZES.paddingVerticalButton,
+  },
+  small: {
+    paddingHor: SIZES.paddingHorButton,
+    paddingVertical: SIZES.paddingVerticalButton,
+  },
+  large: {
+    paddingHor: SIZES.paddingHorButton,
+    paddingVertical: SIZES.paddingVerticalButton,
+  },
 };
 
 export const styles = StyleSheet.create({
@@ -37,10 +46,10 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: 20,
-    marginHorizontal: 10,
-    borderWidth: 3,
-    margin: 4,
-    paddingHorizontal: 10,
+    borderRadius: SIZES.borderRadiusButton,
+    marginHorizontal: SIZES.marginHorizontalButton,
+    borderWidth: SIZES.borderWidthButton,
+    margin: SIZES.marginButton,
+    paddingHorizontal: SIZES.paddingHorizontalButton,
   },
 });

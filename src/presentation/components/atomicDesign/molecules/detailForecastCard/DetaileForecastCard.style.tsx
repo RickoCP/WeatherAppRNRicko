@@ -19,5 +19,9 @@ export function styles(): any {
       justifyContent: 'center',
       width: wp(100),
     },
+    imageView: {
+      height: wp(40),
+      width: wp(40),
+    },
   });
 }

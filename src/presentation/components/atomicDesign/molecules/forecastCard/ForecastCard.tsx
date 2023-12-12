@@ -5,6 +5,7 @@ import {IForecastdayHour} from '@domains/entities/interfaces/iForecastWeather';
 import {ISelectedConditionEntity} from '@domains/entities/interfaces/iSelectedCondition';
 import {mainTheme} from '../../constants/theme';
 import FastImage from 'react-native-fast-image';
+import {styles} from './ForecastCard.style';
 
 interface IForecastCard {
   selectedCondition: ISelectedConditionEntity;
@@ -30,15 +31,15 @@ function ForecastCard({
           selected_uv: item.forecastday_uv,
         })
       }
-      className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4"
       style={{
+        ...styles(theme).textWrapper,
         backgroundColor:
           item.forecastday_time === selectedCondition?.selected_time
             ? mainTheme(theme).tabIconSelected.color
             : mainTheme(theme).tabIconDefault.color,
       }}>
       <FastImage
-        className="w-11 h-11"
+        style={styles().iconView}
         source={{uri: 'https:' + item?.forecastday_icon}}
       />
       <Text className="text-base font-semibold" style={mainTheme(theme).text}>

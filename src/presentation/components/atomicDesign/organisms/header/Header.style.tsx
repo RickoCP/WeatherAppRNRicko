@@ -1,27 +1,28 @@
 import {StyleSheet} from 'react-native';
+import {wp} from '../../constants/ResponsiveLayout';
 
 export const styles = StyleSheet.create({
   headerView: {
     flex: 1,
     flexDirection: 'row',
-    paddingLeft: 20,
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingLeft: wp(20),
+    paddingTop: wp(5),
+    paddingBottom: wp(5),
   },
 
   title: {
     width: '70%',
-    height: 50,
+    height: wp(50),
     justifyContent: 'center',
     fontWeight: '700',
   },
   titleText: {
-    fontSize: 20,
+    fontSize: wp(20),
     color: 'black',
   },
   logoutBtn: {
     width: '30%',
-    height: 50,
+    height: wp(50),
     justifyContent: 'center',
   },
 });

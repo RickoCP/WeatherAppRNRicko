@@ -4,6 +4,8 @@ import {ISearchWeatherVM} from '@presentation/vm/SearchWeather';
 import Icon from 'react-native-vector-icons/AntDesign';
 import {mainTheme} from '../../constants/theme';
 import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/textComponent';
+import {wp} from '../../constants/ResponsiveLayout';
+import {styles} from './SearchItem.style';
 
 interface ISearchItem {
   theme: string;
@@ -23,10 +25,11 @@ function SearchItem({
   return (
     <TouchableOpacity
       onPress={() => handleLocation(loc)}
-      className={'flex-row items-center border-0 p-3 px-4 mb-1 ' + borderClass}>
+      style={styles(theme).itemWrapper}
+      className={'flex-row items-center gap-1' + borderClass}>
       <Icon
         name="enviromento"
-        size={20}
+        size={wp(20)}
         color={mainTheme(theme).Theme1.color}
       />
       <TextComponent
@@ -34,7 +37,6 @@ function SearchItem({
         variant={'primary1'}
         size={'h4'}
         text={`${loc?.name}, ${loc?.country}`}
-        className="ml-2"
       />
     </TouchableOpacity>
   );

@@ -17,5 +17,6 @@
           ]
       }
   },
-  "typeRoots": ["./types"]
+  "typeRoots": ["./types"],
+  
 }

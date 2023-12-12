@@ -25,7 +25,7 @@ function SearchSection({
   console.log('render Search Section');
 
   return (
-    <View style={styles().searchWrapper} className="mx-4 relative z-50">
+    <View style={styles().searchWrapper} className="relative z-50">
       <SearchBar
         theme={theme}
         showSearch={showSearch}
@@ -34,7 +34,7 @@ function SearchSection({
       />
 
       {locations.length > 0 && showSearch ? (
-        <View className="absolute w-full bg-gray-300 top-16 rounded-3xl ">
+        <View className="absolute w-full bg-gray-300 top-16 rounded-xl ">
           {locations.map((loc, index) => {
             let showBorder = index + 1 !== locations.length;
             return (

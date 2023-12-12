@@ -1,6 +1,6 @@
-import {Dimensions, StyleSheet} from 'react-native';
-const {width, height} = Dimensions.get('window');
+import {StyleSheet} from 'react-native';
 import {Day} from '@core/initialData/initialData';
+import {DEVICE_HEIGHT, DEVICE_WIDTH, wp} from './ResponsiveLayout';
 
 export const COLORS = {
   primary1_1: '#1A120B',
@@ -15,6 +15,7 @@ export const COLORS = {
 
   white: '#FFFFFF',
   black: '#000000',
+  border: '#bbbbbb',
 
   whiteTrans: '#FFFFFFc0',
   blackTrans: '#000000c0',
@@ -37,29 +38,48 @@ export const COLORS = {
   YELLOW_COLOR: '#FFE142',
   ALERT: '#ED4F32',
 };
+
 export const SIZES = {
   // global sizes
-  base: 8,
-  font: 14,
-  radius: 12,
-  padding: 24,
+  base: wp(8),
+  font: wp(14),
+  radius: wp(10),
+  padding: wp(10),
+  margin: wp(10),
 
   // font sizes
-  largeTitle: 40,
-  h1: 30,
-  h2: 22,
-  h3: 16,
-  h4: 14,
-  h5: 12,
-  body1: 30,
-  body2: 22,
-  body3: 16,
-  body4: 14,
-  body5: 12,
+  largeTitle: wp(40),
+  h1: wp(30),
+  h2: wp(22),
+  h3: wp(16),
+  h4: wp(14),
+  h5: wp(12),
+  body1: wp(30),
+  body2: wp(22),
+  body3: wp(16),
+  body4: wp(14),
+  body5: wp(12),
 
   // app dimensions
-  width,
-  height,
+  width: DEVICE_WIDTH,
+  height: DEVICE_HEIGHT,
+
+  // button
+  borderRadiusButton: wp(20),
+  marginHorizontalButton: wp(10),
+  borderWidthButton: wp(3),
+  paddingButton: wp(10),
+  marginButton: wp(4),
+  paddingHorizontalButton: wp(10),
+  paddingHorButton: wp(4),
+  paddingVerticalButton: wp(2),
+
+  //text input
+  paddingTextInput: wp(10),
+  heightTextInput: wp(50),
+  borderWidthTextInput: wp(3),
+  marginTextInput: wp(10),
+  borderRadiusTextInput: wp(15),
 };
 
 export const FONTS = {

@@ -17,7 +17,7 @@ function ForecastSection({theme, location}: Readonly<IForecastSection>) {
   console.log('render ForecastSection');
 
   return (
-    <View className="mx-4 flex justify-between flex-1 mb-2">
+    <View className="flex justify-between flex-1">
       <View className="flex flex-row justify-between p-4">
         {/* location */}
         <View className="flex gap-4 flex-1">

@@ -1,4 +1,5 @@
 import React from 'react';
+import {View} from 'react-native';
 import {TextComponent} from '@presentation/components/atomicDesign/atoms/text/textComponent';
 import {ButtonComponent} from '@presentation/components/atomicDesign/atoms/button/buttonComponent';
 import {IDetailWeather} from '@presentation/presenters/action-interfaces/iDetailWeather';
@@ -18,7 +19,7 @@ function WeatherDetailError({
   console.log('render WeatherDetailError');
 
   return (
-    <>
+    <View className="p-4 align-center">
       <TextComponent
         themeInput={theme}
         variant={'primary1'}
@@ -33,7 +34,7 @@ function WeatherDetailError({
         style={styles().setButtonError}>
         <TextComponent text={'refresh'} variant="primary1" size="h3" />
       </ButtonComponent>
-    </>
+    </View>
   );
 }
 
