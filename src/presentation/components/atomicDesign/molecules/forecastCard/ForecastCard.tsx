@@ -20,6 +20,7 @@ function ForecastCard({
   item,
   onSelectCondition,
 }: Readonly<IForecastCard>) {
+  console.log('render ForecastCard');
   return (
     <TouchableOpacity
       onPress={() =>
@@ -55,4 +56,17 @@ function ForecastCard({
   );
 }
 
-export default memo(ForecastCard);
+const equal = (
+  prev: {
+    item: IForecastdayHour;
+    selectedCondition: ISelectedConditionEntity;
+  },
+  next: {
+    item: IForecastdayHour;
+    selectedCondition: ISelectedConditionEntity;
+  },
+) =>
+  (prev.item.forecastday_time === prev.selectedCondition?.selected_time) ===
+  (next.item.forecastday_time === next.selectedCondition?.selected_time);
+
+export default memo(ForecastCard, equal);

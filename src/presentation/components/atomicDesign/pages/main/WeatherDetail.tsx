@@ -6,6 +6,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import {useWeatherDetail} from './WeatherDetail.hook';
+// import {useWeatherDetail} from './WeatherDetail.controller';
 import WeatherDetailError from '../../organisms/mainComponent/WeatherDetailError';
 import MainTemplate from '../../templates/mainTemplate/MainTemplate';
 import Header from '../../organisms/header/Header';
